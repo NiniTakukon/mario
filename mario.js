@@ -1501,6 +1501,7 @@ function initCanvas() {
   mainCv.width = VIEW_W * SCALE; mainCv.height = VIEW_H * SCALE;
   mainCtx = mainCv.getContext('2d');
   mainCtx.imageSmoothingEnabled = false;
+  mainCv.addEventListener('pointerup', handleStartPointer);
   const prompt = document.getElementById('startPrompt');
   if (prompt) prompt.addEventListener('click', handleStartPointer);
 }
